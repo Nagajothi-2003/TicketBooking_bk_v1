@@ -4,21 +4,22 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-
 @Entity
-@Table(name="SignUP")
-public class SignUp {
+@Table(name="Register")
+public class Register {
+	
 	@Id
 	@GeneratedValue
-	private int sign_up;
+	private int Reg_id;
 	private String username;
 	private String email;
 	private String password;
-	public int getSign_id() {
-		return sign_up;
+	private String address;
+	public int getReg_id() {
+		return Reg_id;
 	}
-	public void setSign_id(int sign_up) {
-		this.sign_up = sign_up;
+	public void setReg_id(int reg_id) {
+		Reg_id = reg_id;
 	}
 	public String getUsername() {
 		return username;
@@ -38,7 +39,17 @@ public class SignUp {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
 	
-
+	
+	
+	
+	
+	
+	
 }
-
